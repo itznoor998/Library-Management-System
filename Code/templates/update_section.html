@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Section</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <style>
+        .addbook{
+            margin: 10px;
+            font-size: 120%;
+            font-weight: 120%;
+        }
+        #form-div{
+            display: inline-flexbox;
+            max-height: 250px;
+            padding-left: 120px;
+            background-color: rgba(127, 255, 212, 0.571);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" alt="logo" id="img_logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Log out</a></h4>
+    </header>
+    
+    <main>
+        <div class="headdiv">
+            <p>Update Section</p>
+        </div>
+        <div class="container">
+            <aside>
+                <h3><a href="/available/books/{{username}}">Available Books</a></h3>
+                <h3><a href="/add/book/{{username}}">Add Book</a></h3>
+                <h3><a href="/add/section/{{username}}">Add Section</a></h3>
+                <h3><a href="/manage/book/{{username}}">Manage Book</a></h3>
+                <h3><a href="/manage/section/{{username}}" style="color: antiquewhite;">Manage Section</a></h3>
+                <h3><a href="/add/booksection/{{username}}">Add BookSection</a></h3>
+                <h3><a href="/manage/user/{{username}}">Manage User</a></h3>
+            </aside>
+            <div class="container" id="form-div">
+                <form action="/update/section/{{section.section_id}}/{{username}}"  method="post">
+                    <div class="addbook">
+                        <label for="bname">Section Name:</label>
+                        <input type="text" id="bname" name="section_name" value="{{section.section_name}}" required>
+                    </div>
+                    <div class="addbook">
+                        <label for="section">Section Code:</label>
+                        <input type="text" id="section" name="section_code" value="{{section.section_code}}" required>
+                    </div>
+                    <div><input type="submit" value="Update Section"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

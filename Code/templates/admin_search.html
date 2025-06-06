@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" alt="logo" id="img_logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Log out</a></h4>
+    </header>
+    <main>
+        <div class="headdiv">
+            <p>Search Results</p>
+        </div>
+        <div class="container">
+            <aside>
+                <h3><a href="/available/books/{{username}}">Available Books</a></h3>
+                <h3><a href="/add/book/{{username}}">Add Book</a></h3>
+                <h3><a href="/add/section/{{username}}">Add Section</a></h3>
+                <h3><a href="/manage/book/{{username}}">Manage Book</a></h3>
+                <h3><a href="/manage/section/{{username}}">Manage Section</a></h3>
+                <h3><a href="/add/booksection/{{username}}">Add BookSection</a></h3>
+                <h3><a href="/manage/user/{{username}}">Manage User</a></h3>
+            </aside>
+            <div class="container" style="margin-left: 140px;">
+                <div>
+                    <h2>Search result for Book</h2>
+                    {%for book in books%}
+                    <p><a href="/details/book/{{book.book_id}}/{{username}}" style="background-color:rgba(194, 202, 201);">{{book.book_name}}</a></p>
+                    {%endfor%}
+                </div>
+                <div>
+                    <h2>Search result for Author</h2>
+                    {%for author in authors%}
+                    <p><a href="/details/author/{{author.author_id}}/{{username}}" style="background-color:rgba(194, 202, 201);">{{author.author_fname}} {{author.author_lname}}</a></p>
+                    {%endfor%}
+                </div>
+                <div>
+                    <h2>Search result for Section</h2>
+                    {%for section in sections%}
+                    <p><a href="/details/section/{{section.section_id}}/{{username}}" style="background-color:rgba(194, 202, 201);">{{section.section_name}}</a></p>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

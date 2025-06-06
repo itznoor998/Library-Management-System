@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <style>
+        #seplink{
+            margin-left: 720px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <img src="/static/images/project_logo.png" width="70px" alt="Logo">
+            <h4><a href="/" style="background-color:rgba(194, 202, 201);">Home</a></h4>
+            <a href="admin/login" id="seplink">Admin Login</a>
+    </header>
+    <main>
+        <div class="container">
+            <p style="color: red;text-align: center;">*Invalid username or secutiy key</p>
+            <h2>Forgot Password</h2>
+            <form action="/forgot_password" method="post">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" placeholder="Enter your username*" id="username", name="username" required>
+                </div>
+                <label for="key" >Security Key:</label>
+                <input type="password" placeholder="Enter your key*" id="key" name="key" required>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="text" placeholder="Enter your new password*" id="password", name="password" required>
+                </div>
+                <input type="submit" value="Reset Password" class="button">
+            </form>
+            <div id="foot">
+               <span>New User?<a href="/registration">Sign Up</a><br>Forgot<a href="/user/login">Sign In</a></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

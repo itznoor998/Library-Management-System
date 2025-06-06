@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <style>
+        #seplink{
+            margin-left: 720px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" width="70px" alt="Logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Home</a></h4>
+        <a href="/admin/login" id="seplink">Admin Login</a>
+    </header>
+    <main>
+        <div class="container">
+            <p style="color: red;text-align: center;">*Username already exist</p>
+            <h2>Registration</h2>
+            <form action="/registration" method="post">
+                <label for="username">Username:</label>
+                <input type="text" placeholder="Enter your username *" name="username" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter your password *" name="password" id="password" required>
+                <p>Select Occupation:</p>
+                <input type="radio" name="type" id="student" value="Student" style="width: auto;">
+                <label for="student">Student</label>
+                <input type="radio" name="type" id="faculty" value="Faculty" style="width: auto;">
+                <label for="faculty">Faculty</label>
+                <input type="radio" name="type" id="others" value="Others" style="width: auto;">
+                <label for="others">Others</label>
+                <input type="submit" value="Register" class="button">
+            </form>
+            <div id="foot">
+               <span>Already User?<a href="/user/login">Sign In</a></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <style>
+        .addbook{
+            margin: 10px;
+            font-size: 120%;
+            font-weight: 120%;
+        }
+        #form-div{
+            display: inline-flexbox;
+            max-height: 250px;
+            padding-left: 120px;
+            background-color: rgba(127, 255, 212, 0.571);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" alt="logo" id="img_logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Log out</a></h4>
+    </header>
+    
+    <main style="max-width: 640px;">
+        <div class="headdiv">
+            <p>Admin Dashboard</p>
+        </div>
+        <div class="container">
+            <aside>
+                <h3><a href="/available/books/{{username}}">Available Books</a></h3>
+                <h3><a href="/add/book/{{username}}" style="color: antiquewhite;">Add Book</a></h3>
+                <h3><a href="/add/section/{{username}}">Add Section</a></h3>
+                <h3><a href="/manage/book/{{username}}">Manage Book</a></h3>
+                <h3><a href="/manage/section/{{username}}">Manage Section</a></h3>
+                <h3><a href="/add/booksection/{{username}}">Add BookSection</a></h3>
+                <h3><a href="/manage/user/{{username}}">Manage User</a></h3>
+            </aside>
+            <div class="container" id="form-div">
+                <form action="/add/book/{{username}}"  method="post">
+                    <div class="addbook">
+                        <label for="bname">Book Name:</label>
+                        <input type="text" id="bname" name="book_name" required placeholder="Book Name*">
+                    </div>
+                    <div class="addbook">
+                        <label for="afname">Author First Name:</label>
+                        <input type="text" id="afname" name="author_fname" required placeholder="Author First Name*">
+                    </div>
+                    <div class="addbook">
+                        <label for="alname">Author Last Name:</label>
+                        <input type="text" id="alname" name="author_lname" required placeholder="Author Last Name*">
+                    </div>
+                    <div class="addbook">
+                        <label for="edition">Edition:</label>
+                        <input type="text" id="edition" name="edition" required placeholder="Edition*">
+                    </div>
+                    <div class="addbook">
+                        <label for="copy">Book Copies:</label>
+                        <input type="number" id="copy" name="copies" required placeholder="Book Copies">
+                    </div>
+                    <div class="addbook">
+                        <label for="content">Book Content:</label>
+                        <textarea name="book_content" id="content" cols="40" rows="2"></textarea>
+                    </div>
+                    <div><input type="submit" value="Add Book"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

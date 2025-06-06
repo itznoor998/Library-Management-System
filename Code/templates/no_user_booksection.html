@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books by Section</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" alt="logo" id="img_logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Log Out</a></h4>
+    </header>
+    <main>
+        <div class="headdiv">
+            <p>Books by Section</p>
+        </div>
+        <div class="container">
+            <aside>
+                <h3><a href="/dashboard/{{username}}">User Dashboard</a></h3>
+                <h3 ><a href="/mybook/{{username}}">My Books</a></h3>
+                <h3><a href="/myfeedback/{{username}}">My Feedbacks</a></h3>
+                <h3><a href="/booksection/{{username}}" style="color: antiquewhite;">Books by Section</a></h3>
+                <h3><a href="/bookauthor/{{username}}">Books by Author</a></h3>
+            </aside>
+            <div class="container">
+                <h1>No Books Available in any Section</h1>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

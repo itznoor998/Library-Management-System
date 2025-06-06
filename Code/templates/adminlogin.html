@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <style>
+        #seplink{
+            margin-left: 720px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" width="70px" alt="Logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Home</a></h4>
+        <a href="/user/login" id="seplink">User Login</a>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Admin Login</h2>
+            <form action="/admin/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" placeholder="Enter your username*" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter your password*" id="password" name="password" required>
+                <input type="submit" value="Log In" class="button">
+            </form>
+            <div id="foot">
+               <span>Forgot<a href="/forgot_password">Password ?</a><br><a href="/user/login">User Login</a></span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

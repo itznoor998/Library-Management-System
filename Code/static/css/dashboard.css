@@ -1,0 +1,49 @@
+header{
+    background-color: rgba(194, 202, 201);
+    display: flex;
+}
+body{
+    background-image: url(/static/images/book1_image\ for\ mad\ i.jpeg);
+    background-size: cover;
+}
+main{
+    margin: 50px;
+    margin-left: 120px;
+    padding: 20px;
+    max-width: 720px;
+    align-items: center;
+}
+.container{
+    margin-left: 50px;
+    padding: 30px;
+}
+.headdiv{
+    margin-left: 80px;
+    text-align: center;
+}
+#home{
+    text-align: center;
+    color: rgba(2, 16, 7, 0.719);
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 150;
+    font-size: 25px;
+}
+aside{
+    float: left;
+    background-color: blueviolet;
+    max-width: 140px;
+    max-height: 300px;
+    padding: 10px;
+    border-radius: 4px;
+}
+a{
+    color: black;
+    font-style: oblique;
+    text-decoration: none;
+    background-color: rgba(152, 57, 242, 0.943);
+}
+#img_logo{
+    width: 70px;
+}

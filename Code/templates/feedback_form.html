@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <style>
+        form{
+            margin-left: 120px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" alt="logo" id="img_logo">
+        <h4><a href="/" style="background-color:rgba(194, 202, 201);">Log Out</a></h4>
+    </header>
+    <main>
+        <div class="headdiv">
+            <p>Give Feedback</p>
+        </div>
+        <div class="container">
+            <aside>
+                <h3><a href="/dashboard/{{username}}">User Dashboard</a></h3>
+                <h3 ><a href="/mybook/{{username}}" style="color: antiquewhite;">My Books</a></h3>
+                <h3><a href="/myfeedback/{{username}}">My Feedbacks</a></h3>
+                <h3><a href="/booksection/{{username}}">Books by Section</a></h3>
+                <h3><a href="/bookauthor/{{username}}">Books by Author</a></h3>
+            </aside>
+            <div class="container">
+                <h2 style="margin-left: 105px;">{{book.book_name}}</h2>
+                <form action="/feedback/book/{{book.book_id}}/{{username}}" method="post">
+                    <label for="feedback">Feedback:</label>
+                    <textarea name="feedback" id="feedback" cols="30" rows="2"></textarea>
+                    <div style="margin: 5px;">
+                        <input type="submit" value="Give Feedback">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="shortcut icon" href="/static/images/project_logo.png" type="image/x-icon">
+    <style>
+        body{
+            background-image: url(/static/images/book1_image\ for\ mad\ i.jpeg);
+        }
+        header{
+            background-color: rgba(194, 202, 201);
+            display: flex;
+        }
+        h1{
+            color: rgb(74, 104, 31);
+           text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: rgba(88, 32, 157, 0.92);
+            font-family: cursive;
+            font-weight: 300;
+            text-decoration: wavy;
+        }
+        p{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-weight: 700;
+        }
+        #seplink1,#seplink2{
+            margin-left: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/images/project_logo.png" alt="logo" width="70px">
+        <p style="padding: 5px;"><a href="home.html">Home</a></p>
+        <p><a href="/admin/login" id="seplink1">Admin Login</a></p>
+        <p><a href="/user/login" id="seplink2">User Login</a></p>
+    </header>
+    <main>
+        <h1>Welcome {{user.user_name}}. You have created your account Successfully</h1>
+        <h2>{{user.security_key}}</h2>
+        <p>Please note the Security Key for future Login</p>
+    </main>
+</body>
+</html>
