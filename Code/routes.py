@@ -510,7 +510,11 @@ def add_booksection(username):
 @app.get('/manage/user/<username>')
 def manage_user(username):
     users = User.query.all()
-    if len(users)==0:
+    if len(users)==1:
+        user = users[0]
+        if user.user_type=='Admin':
+            return render_template('no_user.html',username=username)
+    elif len(users)==0:
         return render_template('no_user.html',username=username)
     return render_template('manage_user.html',users=users,username=username)
 
